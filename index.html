@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/ab367caa48.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Copy to Clipboard</title>
+</head>
+
+<body>
+
+    <div style="font-size:40px; margin-left: 60px">
+        COPY TO CLIPBOARD
+    </div><br><br>
+
+    <div>
+        <div>
+            <label> ClipboardJS + Bootstrap </label><br>
+            <input type="text" id="input1" />
+            <a href="javascript:void(0)" class="clipboard" data-clipboard-target="#input1" >
+                <i class="fas fa-copy" style="font-size:30px ; margin-left: 10px" data-toggle="tooltip"
+                    data-placement="right" title="Copiar"></i>
+            </a>
+
+        </div>
+
+        <div><br><br>
+            <label> ClipboardJS + Custom Tooltip </label><br>
+            <input type="text" id="input2" />
+            <div class="copy-info">
+                <a href="javascript:void(0)" class="clipboard2" data-clipboard-target="#input2">
+                    <i class="fas fa-copy" style="font-size:30px"></i>
+                    <span class="copy-infotext">Copiar</span>
+                </a>
+            </div>
+        </div><br><br>
+
+        <div>
+            <label> Onclick + Custom Tooltip</label><br>
+            <input type="text" id="input3" />
+            <div class="copy-info">
+                <a href="javascript:void(0)" onclick=" copyTextById('input3', 'myTooltip' )" onmouseout="outFunc('myTooltip')">
+                    <i class="fas fa-copy" style="font-size:30px"></i>
+                    <span class="copy-infotext" id="myTooltip">Copiar</span>
+                </a>
+            </div>
+        </div><br><br>
+
+        <div>
+            <label> JS EventListener + Bootstrap </label><br>
+            <input type="text" id="input4" />
+            <a href="javascript:void(0)" class="clipboard3" data-clipboard-target="#input4">
+                <i class="fas fa-copy" style="font-size:30px ; margin-left: 10px" data-toggle="tooltip"
+                    data-placement="right" title="Copiar"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+    <script src="node_modules\clipboard\dist\clipboard.min.js"></script>
+    <script src="copy.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="node_modules\popper.js\dist\umd\popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+
+</body>
+
+</html>
