@@ -1,1 +1,1 @@
-include: [node_modules]
+exclude: [node_modules]
