@@ -1,5 +1,1 @@
-<<<<<<< HEAD
 include: ["node_modules/clipboard/dist/clipboard.min.js"]
-=======
-include: ["/node_modules"]
->>>>>>> e499205939b599a8d7e33cb21239a8affba81e40
