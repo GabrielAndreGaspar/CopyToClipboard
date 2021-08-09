@@ -1,1 +1,3 @@
-include: ["node_modules/clipboard/dist/clipboard.min.js"]
+include:
+  - .htaccess
+  - node_modules
